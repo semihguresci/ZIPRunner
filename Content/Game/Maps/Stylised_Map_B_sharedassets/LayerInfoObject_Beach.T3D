@@ -1,0 +1,4 @@
+Begin Object Class=/Script/Landscape.LandscapeLayerInfoObject Name="LayerInfoObject_Beach"
+   LayerName="Beach"
+   LayerUsageDebugColor=(R=0.466667,G=0.749020,B=0.396078,A=1.000000)
+End Object

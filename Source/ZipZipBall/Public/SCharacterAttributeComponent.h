@@ -39,9 +39,6 @@ protected:
 
 	float minSize = 3.5f;
 
-	//UFUNCTION(NetMulticast, Reliable) 
-	//void MulticastSizeChanged(AActor* InstigatorActor, float NewHealth, float Delta);
-
 public: 
 
 	UFUNCTION(BlueprintCallable, Category = "Attributes")

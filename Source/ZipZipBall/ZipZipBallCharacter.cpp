@@ -93,14 +93,6 @@ void AZipZipBallCharacter::SetupPlayerInputComponent(class UInputComponent* Play
 	// Bind movement events
 	PlayerInputComponent->BindAxis("Move Forward / Backward", this, &AZipZipBallCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("Move Right / Left", this, &AZipZipBallCharacter::MoveRight);
-
-	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
-	// "Mouse" versions handle devices that provide an absolute delta, such as a mouse.
-	// "Gamepad" versions are for devices that we choose to treat as a rate of change, such as an analog joystick
-	//PlayerInputComponent->BindAxis("Turn Right / Left Mouse", this, &APawn::AddControllerYawInput);
-	//PlayerInputComponent->BindAxis("Look Up / Down Mouse", this, &APawn::AddControllerPitchInput);
-	//PlayerInputComponent->BindAxis("Turn Right / Left Gamepad", this, &AZipZipBallCharacter::TurnAtRate);
-	//PlayerInputComponent->BindAxis("Look Up / Down Gamepad", this, &AZipZipBallCharacter::LookUpAtRate);
 }
 
 void AZipZipBallCharacter::Collect(AActor* inst, FCollectablePopertyStruct collectableProperty, TSubclassOf<USAction> ActionClass)
@@ -139,15 +131,9 @@ void AZipZipBallCharacter::StartZipZip()
 
 void AZipZipBallCharacter::CollideWithPointTrigger()
 {
-	//GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Black, FString::Printf(TEXT("CollideWithPointTrigger")));
 	FinishForce -= FinishForceReduce;
 	if (FinishForce < 0)
 		FinishForce = 0;
-	
-	//if (FinishForce>0) 
-	//{
-	//	AttributeComp->SetTarSize(-1);
-	//}
 }
 
 

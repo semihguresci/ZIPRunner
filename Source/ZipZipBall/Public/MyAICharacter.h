@@ -35,10 +35,6 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	//UFUNCTION(BlueprintCallable)
-	//void Collect(FCollectablePopertyStruct collectableProperty) ;
-
-
 	UFUNCTION()
 	void OnSizeChanged(AActor* InstigatorActor, USCharacterAttributeComponent* OwningComp, float NewHealth, float Delta);
 

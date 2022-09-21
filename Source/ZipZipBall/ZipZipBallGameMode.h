@@ -8,8 +8,6 @@
 #include "ZipZipBallGameMode.generated.h"
 
 
-
-
 UCLASS(minimalapi)
 class AZipZipBallGameMode : public AGameModeBase
 {
